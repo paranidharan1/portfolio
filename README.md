@@ -1,11 +1,11 @@
 # portfolio
 
-Personal portfolio for Paranidharan M, AI Research Engineer at ZenteiQ.
+Personal portfolio for Paranidharan, AI Research Engineer.
 
-Static site (HTML, CSS, JS). No build step.
+Static site (HTML, CSS, JS), no build step.
 
 ```bash
-python3 -m http.server 8000   # then open http://localhost:8000
+python3 -m http.server 8000
 ```
 
-Deploy: push to GitHub and enable Pages on the `main` branch, root folder.
+Live: https://paranidharan1.github.io/portfolio/
