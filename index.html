@@ -23,6 +23,7 @@
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#dhir">Dhīr</a>
+    <a href="#models">Models</a>
     <a href="#projects">Projects</a>
     <a href="#notes">Notes</a>
     <a href="#background">Background</a>
@@ -56,6 +57,15 @@
         <div><dt>11</dt><dd>languages</dd></div>
       </dl>
     </a>
+
+    <ul class="proof" aria-label="Highlights">
+      <li>Pretrained two foundation models from scratch</li>
+      <li>Second author, Dhīr technical report</li>
+      <li>Released on AIKosh under the IndiaAI Mission</li>
+      <li>IISc · DRDO · IBM Granite</li>
+      <li>CASML organiser, 500+ participants</li>
+      <li>Exhibitor, India AI Impact Summit 2026</li>
+    </ul>
   </div>
 </section>
 
@@ -176,11 +186,33 @@
     <a href="https://zenteiq.ai/research/blog/the-price-of-a-token/" target="_blank" rel="noopener">The price of a token</a>
     <a href="https://zenteiq.ai/research/blog/inferencing-dhir-on-edge-devices/" target="_blank" rel="noopener">Dhīr on edge devices</a>
   </div>
+  <div class="links">
+    <span>In the press</span>
+    <a href="https://exceptional.technology/zenteiq-dhir-foundation-models-india/" target="_blank" rel="noopener">Dhīr launch coverage</a>
+    <a href="https://www.thehindubusinessline.com/news/science/ai-startup-zeinteiq-to-develop-8-billion-parameter-scientific-model-under-indiaai-mission/article70080799.ece" target="_blank" rel="noopener">The Hindu BusinessLine</a>
+    <a href="https://cloud.google.com/blog/products/containers-kubernetes/zenteiq-scales-physical-ai-inference-4x-with-gke-and-llm-d" target="_blank" rel="noopener">Google Cloud customer story</a>
+    <a href="https://mitsloanindia.com/article/zenteiq-ai/" target="_blank" rel="noopener">MIT Sloan Management Review India</a>
+  </div>
+</section>
+
+<!-- MODELS -->
+<section id="models" class="wrap section">
+  <div class="mh"><p class="label">04 · Models</p><span class="live" id="hub-status">snapshot</span></div>
+  <h2>Models I've shipped</h2>
+  <p class="lead">Two I pretrained from scratch, two I fine-tuned, one dataset, and a few more cooking in private. Download and like counts are pulled live from the Hugging Face Hub.</p>
+  <div class="grid g3">
+    <a class="card" href="https://zenteiq.ai/dhir/" target="_blank" rel="noopener"><span class="pill ok">Pretrained from scratch</span><h3>Dhīr 2B</h3><p class="spec">Dense · 6T+ tokens · TPU v6e</p><p>A 2.03B-parameter language model trained from random weights. Small enough to run offline on a laptop's integrated graphics.</p><div class="mstats"><div><b>2.03B</b><span>parameters</span></div><div><b>1.21 GB</b><span>in 4-bit</span></div></div></a>
+    <a class="card" href="https://zenteiq.ai/dhir/" target="_blank" rel="noopener"><span class="pill ok">Pretrained from scratch</span><h3>Dhīr 5B MoE</h3><p class="spec">Mixture of experts · 2 of 12 per token</p><p>5.09B total parameters but only 1.79B active per token, so it decodes faster than the dense model for a single user.</p><div class="mstats"><div><b>5.09B</b><span>total</span></div><div><b>1.79B</b><span>active</span></div></div></a>
+    <a class="card" href="https://huggingface.co/parani01/phyen" target="_blank" rel="noopener" data-hf="models/parani01/phyen"><span class="pill">Fine-tune</span><h3>phyen</h3><p class="spec">8.3B parameters · BF16 · merged</p><p>Fully fine-tuned and merged (not an adapter) for physics and engineering reasoning: thermodynamics, fluid mechanics, structural analysis.</p><div class="mstats"><div><b data-dl>–</b><span>downloads</span></div><div><b data-likes>–</b><span>likes</span></div></div></a>
+    <a class="card" href="https://huggingface.co/parani01/Fine-tuned-physics-VLM-on-LoRA-and-QLoRA" target="_blank" rel="noopener" data-hf="models/parani01/Fine-tuned-physics-VLM-on-LoRA-and-QLoRA"><span class="pill">Vision-language</span><h3>Physics VLM</h3><p class="spec">Qwen2-VL-7B · QLoRA · DeepSpeed ZeRO-3</p><p>Reads physics problems from images and answers in structured JSON. QLoRA on the language blocks, a small LoRA on the projector, frozen vision encoder. Trained on ScienceQA.</p><div class="mstats"><div><b data-dl>–</b><span>downloads</span></div><div><b data-likes>–</b><span>likes</span></div></div></a>
+    <a class="card" href="https://huggingface.co/datasets/parani01/dataclaw-parani01" target="_blank" rel="noopener" data-hf="datasets/parani01/dataclaw-parani01"><span class="pill">Dataset</span><h3>dataclaw</h3><p class="spec">Claude Code sessions · public</p><p>My own Claude Code conversations, exported and published as a dataset. Yes, I open-sourced my prompts.</p><div class="mstats"><div><b data-dl>–</b><span>downloads</span></div><div><b data-likes>–</b><span>likes</span></div></div></a>
+    <div class="card"><span class="pill">In the lab</span><h3>Private repos</h3><p class="spec">Not public yet</p><p>A few more things are cooking in private repositories. Details when they're ready. This page will update itself.</p><div class="mstats"><div><b>Private</b><span>in progress</span></div><div><b>Soon</b><span>stay tuned</span></div></div></div>
+  </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="wrap section">
-  <p class="label">04 · Projects</p>
+  <p class="label">05 · Projects</p>
   <h2>Things I built when nobody asked</h2>
   <p class="lead">Each one started with "how fast can this go?" and ended with me benchmarking at midnight.</p>
   <div class="grid g4">
@@ -197,7 +229,7 @@
 
 <!-- HOW I WORK -->
 <section id="how" class="wrap section">
-  <p class="label">05 · Field notes</p>
+  <p class="label">06 · Field notes</p>
   <h2>How I actually work</h2>
   <p class="lead">Unofficial operating manual. Mostly true, occasionally exaggerated for effect.</p>
   <div class="grid g4">
@@ -206,26 +238,11 @@
     <div class="card"><span class="pill">Known issue</span><h3>Weekend grudges</h3><p>Machines seem to hold a personal grudge against us, especially on weekends. I've stopped taking it personally.</p><div class="metric"><b>Sat + Sun</b><span>highest failure rate</span></div></div>
     <div class="card"><span class="pill">Habit</span><h3>Papers, then code</h3><p>I chase research papers and implement them to find out which ideas survive contact with a real GPU.</p><div class="metric"><b>arXiv</b><span>read, break, repeat</span></div></div>
   </div>
-
-  <div class="hub">
-    <div class="hub-h"><h3>Live from the Hugging Face Hub</h3><span class="live" id="hub-status">snapshot</span></div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Artifact</th><th>Type</th><th class="num">Downloads</th><th class="num">Likes</th></tr></thead>
-        <tbody id="hub-rows">
-          <tr><td><a href="https://huggingface.co/datasets/parani01/dataclaw-parani01" target="_blank" rel="noopener">parani01/dataclaw-parani01</a></td><td>Dataset</td><td class="num">–</td><td class="num">–</td></tr>
-          <tr><td><a href="https://huggingface.co/parani01/phyen" target="_blank" rel="noopener">parani01/phyen</a></td><td>Model</td><td class="num">–</td><td class="num">–</td></tr>
-          <tr><td><a href="https://huggingface.co/parani01/Fine-tuned-physics-VLM-on-LoRA-and-QLoRA" target="_blank" rel="noopener">parani01/Fine-tuned-physics-VLM-on-LoRA-and-QLoRA</a></td><td>Model</td><td class="num">–</td><td class="num">–</td></tr>
-        </tbody>
-      </table>
-      <p class="note">Fetched from the public Hugging Face API when the page loads. Dhīr weights will appear here once they're published.</p>
-    </div>
-  </div>
 </section>
 
 <!-- NOTES -->
 <section id="notes" class="wrap section">
-  <p class="label">06 · Notes</p>
+  <p class="label">07 · Notes</p>
   <h2>Notes to my past self</h2>
   <p class="lead">Written for the version of me that once stared at an out-of-memory error for two hours.</p>
   <div class="grid g2">
@@ -236,7 +253,7 @@
 
 <!-- BACKGROUND -->
 <section id="background" class="wrap section">
-  <p class="label">07 · Background</p>
+  <p class="label">08 · Background</p>
   <h2>Education, community and skills</h2>
   <div class="grid g2">
     <div class="card"><span class="pill">Education</span><h3>Sathyabama Institute of Science &amp; Technology</h3><p>B.E. Computer Science and Engineering, 2020 to 2024, first class with distinction. Certifications in AWS, DevOps (IIT Bombay) and cloud-edge ML (NPTEL).</p></div>
@@ -255,7 +272,7 @@
 
 <!-- CONTACT -->
 <section id="contact" class="wrap section contact">
-  <p class="label">08 · Contact</p>
+  <p class="label">09 · Contact</p>
   <h2>Got a training run that won't converge?</h2>
   <p class="lead">Foundation models, distributed training, TPU systems, or why your loss went NaN. Bring coffee.</p>
   <div class="cta center">
