@@ -14,17 +14,6 @@
 })();
 
 
-// Copy BibTeX
-(function () {
-  var b = document.getElementById('copy-bib'), pre = document.getElementById('bibtex');
-  if (!b || !pre) return;
-  b.addEventListener('click', function () {
-    var done = function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy BibTeX'; }, 1800); };
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(pre.textContent).then(done, done);
-    else { var r = document.createRange(); r.selectNode(pre); var s = getSelection(); s.removeAllRanges(); s.addRange(r); try { document.execCommand('copy'); } catch (e) {} done(); }
-  });
-})();
-
 // Live Hugging Face stats for each model card (public API). Cards keep dashes if the request fails.
 (function () {
   var cards = document.querySelectorAll('[data-hf]'), status = document.getElementById('hub-status');
