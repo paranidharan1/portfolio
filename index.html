@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Paranidharan Muruganantham · AI Research Engineer</title>
-<meta name="description" content="Paranidharan Muruganantham pretrains foundation models. Latest: Dhīr 2B and 5B MoE, trained from scratch on TPUs. Squeezes performance out of hardware from pretraining to production inference.">
+<meta name="description" content="Paranidharan Muruganantham, AI research engineer at ZenteiQ, Bengaluru. Works across the LLM stack: data, tokenisation, pretraining, post-training and deployment. Co-built Dhīr 2B and 5B MoE, pretrained from scratch on TPUs.">
 <meta name="theme-color" content="#f6f1fb">
 <meta property="og:title" content="Paranidharan Muruganantham · AI Research Engineer">
 <meta property="og:description" content="I pretrain foundation models. Latest: Dhīr, trained from scratch on TPUs.">
@@ -17,13 +17,12 @@
 </head>
 <body>
 
-<a class="announce" href="https://zenteiq.ai/dhir/" target="_blank" rel="noopener"><b>Dhīr 2B and 5B MoE are out.</b> India's first billion-parameter language models, pretrained from scratch on TPUs. <u>Explore ↗</u></a>
+<a class="announce" href="https://zenteiq.ai/dhir/" target="_blank" rel="noopener"><b>Dhīr 2B and 5B MoE are out.</b> Foundation models pretrained from scratch on TPUs. <u>Explore ↗</u></a>
 
 <header class="nav">
   <a class="brand" href="#top"><span class="logo">P</span>Paranidharan M</a>
   <nav aria-label="Primary">
     <a href="#dhir">Dhīr</a>
-    <a href="#performance">Performance</a>
     <a href="#models">Models</a>
     <a href="#builds">Builds</a>
     <a href="#experience">Experience</a>
@@ -38,16 +37,16 @@
   <div class="wrap">
     <p class="eyebrow">AI Research Engineer · ZenteiQ · Bengaluru</p>
     <h1>Paranidharan Muruganantham</h1>
-    <p class="punch">I pretrain foundation models. Latest: <a href="#dhir">Dhīr</a>, India's first billion-parameter language models, trained from scratch.</p>
-    <p class="sub">The engineer who squeezes the last bit of performance out of the hardware, at every step from pretraining to production inference.</p>
+    <p class="punch">I pretrain foundation models. Latest: <a href="#dhir">Dhīr</a>, language models trained from scratch on TPUs.</p>
+    <p class="sub">I work across the LLM stack: data and tokenisation, large-scale pretraining, post-training and deployment.</p>
 
     <div class="metrics" aria-label="Key numbers">
       <a href="#models"><b id="hf-total">1,139</b><span>downloads on Hugging Face</span></a>
       <a href="#dhir"><b>6T+</b><span>tokens, pretrained from scratch</span></a>
-      <a href="#performance"><b>2,048</b><span>TPU v6e chips</span></a>
+      <a href="#dhir"><b>2,048</b><span>TPU v6e chips</span></a>
       <a href="#dhir"><b>2nd</b><span>author, Dhīr technical report</span></a>
     </div>
-    <p class="fine">Launch claim per ZenteiQ's release coverage. Download counts are live from the Hugging Face Hub.</p>
+    <p class="fine">Download counts are live from the Hugging Face Hub.</p>
 
     <div class="cta">
       <a class="btn solid" href="https://zenteiq.ai/dhir/" target="_blank" rel="noopener">Explore Dhīr ↗</a>
@@ -119,18 +118,6 @@
   </details>
 </section>
 
-<!-- PERFORMANCE -->
-<section id="performance" class="wrap section">
-  <p class="label">How I work</p>
-  <h2>Performance at every step</h2>
-  <p class="lead">Training, post-training, inference. Wherever the hardware sits idle, I go looking.</p>
-  <div class="grid g3">
-    <a class="card" href="https://zenteiq.ai/research/blog/training-small-models-for-the-physical-world/" target="_blank" rel="noopener"><span class="pill">Training</span><h3>Pretraining on TPUs</h3><p>Dhīr trained on a pool of 2,048 TPU v6e chips, with a checkpoint lineage hashed from step 0.</p><div class="metric"><b>6T+</b><span>tokens, from random weights</span></div></a>
-    <a class="card" href="https://zenteiq.ai/research/blog/reinforcement-learning-on-tpus/" target="_blank" rel="noopener"><span class="pill">Post-training</span><h3>Reinforcement learning</h3><p>RL on TPUs with language-aware rewards and checks that catch the model gaming its score.</p><div class="metric"><b>2,048</b><span>answers scored per step</span></div></a>
-    <a class="card" href="https://zenteiq.ai/research/blog/inferencing-dhir-on-edge-devices/" target="_blank" rel="noopener"><span class="pill">Inference</span><h3>Fast where it ships</h3><p>4-bit Dhīr running offline on laptops and Jetson boards. Same instinct on my own TensorRT build: 46% lower latency.</p><div class="metric"><b>39.9 tok/s</b><span>Dhīr 5B MoE on a Jetson Orin NX</span></div></a>
-  </div>
-</section>
-
 <!-- MODELS -->
 <section id="models" class="wrap section">
   <div class="mh"><p class="label">Models</p><span class="live" id="hub-status">snapshot</span></div>
@@ -153,7 +140,7 @@
   <p class="lead">Each one started with "how fast can this go?" and ended with me benchmarking at midnight.</p>
   <div class="grid g4">
     <a class="card" href="https://github.com/parani-zenteiq-ai/TensorRT" target="_blank" rel="noopener"><span class="pill">Inference</span><h3>YOLOv5 on TensorRT</h3><p>PyTorch to ONNX to TensorRT FP16 on an RTX A6000, with careful CUDA memory handling.</p><div class="metric"><b>5.2×</b><span>faster than ONNX Runtime, 495 fps</span></div></a>
-    <a class="card" href="https://zenteiq.ai/research/blog/reinforcement-learning-on-tpus/" target="_blank" rel="noopener"><span class="pill">Post-training</span><h3>RL on TPUs</h3><p>The reinforcement-learning stage of Dhīr: rewards, scoring at scale and reward-hacking checks.</p><div class="metric"><b>2,048</b><span>answers scored per step</span></div></a>
+    <a class="card" href="https://zenteiq.ai/research/blog/reinforcement-learning-on-tpus/" target="_blank" rel="noopener"><span class="pill">Post-training</span><h3>RL and alignment</h3><p>Instruction-tuning, chat alignment and reinforcement learning pipelines. Read the team's write-up on RL for Dhīr.</p><div class="metric"><b>GRPO</b><span>RLHF · GRPO · DPO</span></div></a>
     <a class="card" href="https://github.com/paranidharan1/RAG-celery-redis" target="_blank" rel="noopener"><span class="pill">Systems</span><h3>Multimodal RAG</h3><p>Vision-language retrieval with Celery and Redis workers over 50 GB of raw data.</p><div class="metric"><b>−40%</b><span>processing time, 500K+ records</span></div></a>
     <div class="card"><span class="pill">Data</span><h3>Document Prep Kit</h3><p>Builds fine-tuning data from scientific papers, linking figures, tables and formulas to captions.</p><div class="metric"><b>Docling</b><span>proximity-based linking</span></div></div>
   </div>
