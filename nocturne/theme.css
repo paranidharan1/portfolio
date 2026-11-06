@@ -1,0 +1,51 @@
+/* NOCTURNE: dark editorial. Warm near-black, bone text, amber accent. Instrument Serif + Instrument Sans. */
+:root{
+  --bg:#0d0d0e; --paper:#151517; --ink:#f3efe6; --soft:#cdc8bc; --muted:#8d897f; --line:#29292b; --line2:#202022;
+  --accent:#ffb347; --on-accent:#0d0d0e; --accent-dim:rgba(255,179,71,.09); --grid:rgba(255,255,255,.03);
+  --display:"Instrument Serif",Georgia,serif; --sans:"Instrument Sans",system-ui,sans-serif; --mono:"Instrument Sans",system-ui,sans-serif;
+  --r:999px; --rb:18px; --bw:1px; --strong:#3a3a3d; --lift:0 24px 60px -24px rgba(255,179,71,.35); --wrap:1100px;
+  --h1w:400; --h1t:-.035em; --h1s:clamp(64px,15vw,224px); --h1lh:.88; --hw:400; --ht:-.02em; --label-tx:none;
+  --th-bg:#1c1c1f; --th-fg:var(--ink);
+  --hero-bg:radial-gradient(900px 480px at 78% -8%,rgba(255,179,71,.16),transparent 70%),radial-gradient(600px 400px at 0% 40%,rgba(255,120,60,.07),transparent 70%);
+}
+.nav{background:rgba(13,13,14,.75)}
+.logo{background:var(--accent);color:#0d0d0e;border-radius:50%;font-family:var(--display);font-weight:400;font-size:19px}
+.brand{font-family:var(--sans)}
+.hero{padding-top:110px;background-size:auto}
+.kicker{border:0;background:var(--accent-dim);padding:6px 16px;font-weight:500;font-size:13px}
+h1{font-style:normal;color:var(--ink)}
+h1 span{font-style:italic}
+.intro{font-size:clamp(19px,2.1vw,23px);color:var(--soft)}
+.tblock{background:transparent;border:1px solid var(--line);border-radius:var(--rb)}
+.tblock span{font-size:12px;letter-spacing:.1em}
+.btn{background:transparent;border:1px solid #4a4a4d;color:var(--ink);font-weight:500}
+.btn:hover{background:var(--ink);color:#0d0d0e}
+.btn.solid{background:var(--accent);border-color:var(--accent);color:#0d0d0e}
+.btn.solid:hover{background:var(--ink);border-color:var(--ink)}
+.no{background:transparent;color:var(--accent);padding:0;font:italic 400 22px var(--display)}
+.label{font-size:13px;letter-spacing:.1em}
+h2{font-size:clamp(34px,5vw,60px);line-height:1.05;letter-spacing:-.025em}
+h3{font-weight:400;font-size:25px;letter-spacing:-.01em}
+.facts{border-top:1px solid var(--strong)}
+.facts b{font-family:var(--display);font-weight:400;font-size:clamp(40px,5.6vw,72px);color:var(--ink)}
+.datasheet th{font-size:12px;letter-spacing:.08em}
+.datasheet tbody tr:hover{background:var(--accent-dim)}
+.stages p{background:#1f1f22;color:var(--soft);border:1px solid var(--accent)}
+.stages li{background:var(--paper)}
+.stages b{font-family:var(--display);font-weight:400;font-size:21px}
+.flow,.drop,.datasheet,.trio,.feature,.bench{border-color:var(--line)}
+.feature:hover,.drop:hover{border-color:var(--accent)}
+.feature:hover{box-shadow:var(--lift)}
+.index h3,.rv-body h3,.bench-copy h3,.feature h3,.drop b{font-family:var(--display);font-weight:400}
+.index h3{font-size:24px}
+.bench-copy h3{font-size:34px}
+.feature h3{font-size:44px}
+.kv b{font-family:var(--display);font-weight:400;font-size:40px}
+.bar i{border:0;height:10px;border-radius:99px}
+.bar i::after{border-radius:99px}
+.pill{border-radius:99px;font-size:12.5px}
+.links a,.skills span{border-radius:99px}
+.feature-art{background:var(--bg)}
+.g i{border-radius:5px;background:#1a1a1d}
+@keyframes glow{0%,100%{background:#1a1a1d;border-color:var(--line)}50%{background:var(--accent);border-color:var(--accent)}}
+.foot{border-top:1px solid var(--line)}

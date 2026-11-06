@@ -1,0 +1,51 @@
+/* WORKSHOP: neo-brutalist. Light grey, thick black outlines, hard shadows, hot pink + yellow. Bricolage + Work Sans. */
+:root{
+  --bg:#eceef1; --paper:#ffffff; --ink:#000000; --soft:#1c1c1c; --muted:#4a4f57; --line:#000; --line2:#e5e7ea;
+  --accent:#ff3d81; --on-accent:#000; --accent-dim:#ffe0ec;
+  --display:"Bricolage Grotesque",system-ui,sans-serif; --sans:"Work Sans",system-ui,sans-serif; --mono:"DM Mono",ui-monospace,monospace;
+  --r:8px; --rb:14px; --bw:3px; --lift:7px 7px 0 #000; --wrap:1140px;
+  --h1w:800; --h1t:-.04em; --h1s:clamp(52px,12vw,164px); --h1lh:.92; --hw:800; --ht:-.03em;
+  --th-bg:#000; --th-fg:#ffd93d;
+}
+.nav{border-bottom:var(--bw) solid #000;background:#ffd93d}
+.logo{background:#000;color:#ffd93d;border-radius:8px}
+.nav-cta{border:var(--bw) solid #000;box-shadow:3px 3px 0 #000}
+.hero{border-bottom:var(--bw) solid #000;background:var(--bg)}
+.kicker{background:#ffd93d;color:#000;border:var(--bw) solid #000;box-shadow:3px 3px 0 #000;font-weight:500}
+h1 span{color:var(--accent);-webkit-text-stroke:3px #000}
+.tblock,.datasheet,.flow,.drop,.bench,.feature,.trio{border:var(--bw) solid #000;box-shadow:6px 6px 0 #000}
+.tblock>div,.trio .box{border-color:#000}
+.tblock span{color:#000;opacity:.65}
+.btn{border-width:var(--bw);box-shadow:4px 4px 0 #000;font-weight:700;transition:.1s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 #000;background:#ffd93d;color:#000}
+.btn.solid{background:var(--accent);color:#000;border-color:#000}
+.btn.solid:hover{background:#ffd93d;border-color:#000;color:#000}
+.no{background:#000;color:#ffd93d;border-radius:6px}
+.label{color:#000}
+.pill{border:2px solid #000;color:#000;background:#fff;font-weight:500}
+.pill.ok{background:#ffd93d;color:#000;border-color:#000}
+.facts{border-top:var(--bw) solid #000;border-bottom:var(--bw) solid #000}
+.facts div{border-color:#000}
+.facts b{-webkit-text-stroke:0}
+.datasheet tbody tr:hover{background:#ffd93d}
+.stages{border-width:var(--bw);border-color:#000}
+.stages li{border-color:#000}
+.stages p{background:var(--accent);color:#000;font-weight:500}
+.links a{border:2px solid #000;color:#000;font-weight:500;box-shadow:3px 3px 0 #000}
+.links a:hover{background:#ffd93d;transform:translate(1px,1px);box-shadow:2px 2px 0 #000}
+.drop:hover{background:#ffd93d}
+.bar i{border:2px solid #000;height:18px;background:#fff}
+.bar i::after{background:#000}
+.bar:first-child i::after{background:var(--accent)}
+.index,.revs{border-top:var(--bw) solid #000}
+.index li,.rev{border-color:#000}
+.index li>a:hover{background:#ffd93d}
+.index .id,.rv-when b{color:#000;font-weight:500}
+.feature:hover{transform:translate(-3px,-3px);box-shadow:10px 10px 0 #000}
+.feature-art{border-color:#000;background:#ffd93d}
+.g i{border:2px solid #000}
+.skills span{border:2px solid #000;color:#000;background:#fff;font-weight:500}
+.skills span:hover{background:var(--accent);border-color:#000;color:#000}
+.foot{border-top:var(--bw) solid #000;color:#000}
+.box h4{color:#000;background:#ffd93d;display:inline-block;padding:1px 8px;border:2px solid #000}
+@keyframes glow{0%,100%{background:#fff}50%{background:var(--accent)}}
