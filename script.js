@@ -14,19 +14,26 @@
 })();
 
 
-// Live Hugging Face stats for each model card (public API). Cards keep dashes if the request fails.
+// Live Hugging Face all-time download counts (public API). Cards keep their last known numbers if the request fails.
 (function () {
   var cards = document.querySelectorAll('[data-hf]'), status = document.getElementById('hub-status');
   if (!cards.length || !window.fetch) return;
+  var totals = {};
   cards.forEach(function (card) {
-    fetch('https://huggingface.co/api/' + card.getAttribute('data-hf'))
+    var path = card.getAttribute('data-hf');
+    fetch('https://huggingface.co/api/' + path + '?expand%5B%5D=downloadsAllTime')
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
       .then(function (d) {
-        var dl = card.querySelector('[data-dl]'), lk = card.querySelector('[data-likes]');
-        if (dl && d.downloads != null) dl.textContent = d.downloads.toLocaleString();
-        if (lk && d.likes != null) lk.textContent = d.likes.toLocaleString();
-        if (status) { status.textContent = 'live from the Hub'; status.className = 'live on'; }
+        if (d.downloadsAllTime == null) return;
+        var el = card.querySelector('[data-dl]');
+        if (el) el.textContent = d.downloadsAllTime.toLocaleString();
+        totals[path] = d.downloadsAllTime;
+        if (status) {
+          var sum = Object.keys(totals).reduce(function (a, k) { return a + totals[k]; }, 0);
+          status.textContent = 'live from the Hub · ' + sum.toLocaleString() + ' downloads';
+          status.className = 'live on';
+        }
       })
-      .catch(function () { /* keep dashes */ });
+      .catch(function () { /* keep last known numbers */ });
   });
 })();
