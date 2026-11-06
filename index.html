@@ -1,30 +1,35 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-palette="signal">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Paranidharan · AI Research Engineer</title>
 <meta name="description" content="Paranidharan, AI research engineer in Bengaluru (ZenteiQ, IISc). Works on pretraining, distributed training and fast inference. Co-author of Dhīr, models pretrained from scratch on TPUs.">
-<meta name="theme-color" content="#0e121a">
 <meta property="og:title" content="Paranidharan · AI Research Engineer">
 <meta property="og:description" content="Pretraining, distributed training and fast inference. Dhīr 2B and 5B MoE, pretrained from random weights on TPUs.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23151b27'/%3E%3Cpath d='M10 24V8h7a5 5 0 010 10h-7' fill='none' stroke='%238fa8ff' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230f1115'/%3E%3Cpath d='M10 25V7h7.5a5.5 5.5 0 010 11H10' fill='none' stroke='%23ff4d00' stroke-width='3.4' stroke-linejoin='miter'/%3E%3C/svg%3E">
+<script>try{var p=localStorage.getItem('palette');if(p)document.documentElement.setAttribute('data-palette',p)}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="nav">
-  <a class="brand" href="#top"><span class="logo">p</span><span>Paranidharan</span></a>
+  <a class="brand" href="#top"><span class="logo">P</span>Paranidharan</a>
   <nav aria-label="Primary">
     <a href="#dhir">Dhīr</a>
-    <a href="#work">Other work</a>
+    <a href="#work">Projects</a>
     <a href="#notes">Notes</a>
     <a href="#experience">Experience</a>
-    <a href="#contact" class="nav-cta">Get in touch</a>
+    <span class="pal" role="group" aria-label="Colour palette">
+      <button data-p="signal" aria-label="Signal palette" title="Signal"></button>
+      <button data-p="cobalt" aria-label="Cobalt palette" title="Cobalt"></button>
+      <button data-p="charcoal" aria-label="Charcoal palette" title="Charcoal"></button>
+    </span>
+    <a href="#contact" class="nav-cta">Contact</a>
   </nav>
 </header>
 
@@ -33,14 +38,19 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <p class="kicker">AI Research Engineer · Bengaluru</p>
-    <h1>Paranidharan</h1>
+    <p class="kicker">AI Research Engineer</p>
+    <h1>Paranidharan<span>.</span></h1>
     <p class="intro">I work on how large language models get trained: the data, the parallelism, the alignment, and the systems that keep a very large run healthy. Most recently that meant <a href="#dhir">Dhīr</a>, a pair of models pretrained from random weights on TPUs.</p>
-    <div class="roles">
-      <div><span>Now</span><b>AI Research Engineer</b><em>ZenteiQ · IndiaAI Mission</em></div>
-      <div><span>Also</span><b>Research Engineer</b><em>AiREX Lab · Indian Institute of Science</em></div>
-      <div><span>Worked with</span><b>DRDO · IBM</b><em>radar ML · Granite foundation models</em></div>
+
+    <div class="tblock" role="table" aria-label="Summary">
+      <div role="row"><span role="cell">Current</span><b role="cell">AI Research Engineer, ZenteiQ</b></div>
+      <div role="row"><span role="cell">Also</span><b role="cell">Research Engineer, IISc (AiREX Lab)</b></div>
+      <div role="row"><span role="cell">Worked with</span><b role="cell">DRDO · IBM Granite</b></div>
+      <div role="row"><span role="cell">Focus</span><b role="cell">Pretraining · Distributed training · Inference</b></div>
+      <div role="row"><span role="cell">Based in</span><b role="cell">Bengaluru, India</b></div>
+      <div role="row"><span role="cell">Programme</span><b role="cell">IndiaAI Mission</b></div>
     </div>
+
     <div class="cta">
       <a class="btn solid" href="#dhir">See the Dhīr work</a>
       <a class="btn" href="https://parani-zenteiq-ai.github.io/parallelism/" target="_blank" rel="noopener">Read my parallelism notes ↗</a>
@@ -50,34 +60,50 @@
 
 <!-- DHIR -->
 <section id="dhir" class="wrap section">
-  <p class="label">Featured project</p>
+  <div class="shead"><span class="no">01</span><p class="label">Featured project</p></div>
   <h2>Dhīr: language models pretrained from scratch</h2>
   <p class="lead">Dhīr 2B (dense) and Dhīr 5B MoE start from random initialisation and train on more than 6 trillion tokens on Google Cloud TPU v6e, using a tokenizer built in-house for English and ten Indian languages. They launched on 3 November 2026 under the IndiaAI Mission, and launch coverage calls them India's first billion-parameter generative models. I'm second author on the technical report, among 17 authors.</p>
 
   <div class="facts">
     <div><b>6T+</b><span>tokens, trained from step 0</span></div>
     <div><b>2,048</b><span>TPU v6e chips in the pool</span></div>
-    <div><b>5.09B</b><span>MoE, 1.79B active, 2 of 12 experts</span></div>
-    <div><b>1.2 GB</b><span>2B model in 4-bit, runs on a laptop</span></div>
+    <div><b>131k</b><span>vocabulary, 11 languages</span></div>
+    <div><b>16,384</b><span>context length</span></div>
   </div>
 
-  <div class="panel">
-    <div class="panel-head">
+  <div class="datasheet">
+    <table>
+      <thead><tr><th>Specification</th><th>Dhīr 2B</th><th>Dhīr 5B MoE</th></tr></thead>
+      <tbody>
+        <tr><td>Architecture</td><td>Dense transformer</td><td>Mixture of experts, 2 of 12 per token</td></tr>
+        <tr><td>Parameters</td><td>2.03B</td><td>5.09B total · 1.79B active</td></tr>
+        <tr><td>Size, 4-bit</td><td>1.21 GB</td><td>2.95 GB</td></tr>
+        <tr><td>Decode, laptop iGPU</td><td>18.6 tok/s</td><td>20.5 tok/s</td></tr>
+        <tr><td>Decode, Jetson Orin NX</td><td>34.1 tok/s</td><td>39.9 tok/s</td></tr>
+        <tr><td>Decode, Raspberry Pi 4</td><td>2.3 tok/s</td><td>2.8 tok/s</td></tr>
+        <tr><td>41-benchmark average</td><td>61.4</td><td>64.6</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Company-reported figures from the ZenteiQ launch. Decode speeds measured with llama.cpp.</p>
+  </div>
+
+  <div class="flow">
+    <div class="flow-head">
       <h3>Across the stack</h3>
       <p>Dhīr is the work of a large team. This is the pipeline, and the parts of it I've worked on. Hover or tap a stage for detail.</p>
     </div>
     <ol class="stages">
-      <li tabindex="0"><span class="n">1</span><b>Data</b><em>curate, dedupe, shard</em>
+      <li tabindex="0"><span class="n">01</span><b>Data</b><em>curate, dedupe, shard</em>
         <p>Pipelines on datatrove and NeMo Curator, plus tooling to turn papers, tables and formulas into training data.</p></li>
-      <li tabindex="0"><span class="n">2</span><b>Tokenizer</b><em>131k vocab, 11 languages</em>
+      <li tabindex="0"><span class="n">02</span><b>Tokenizer</b><em>131k vocab, 11 languages</em>
         <p>Comparing compression across twelve tokenizers on Indian languages, English, maths and code.</p></li>
-      <li tabindex="0"><span class="n">3</span><b>Pretraining</b><em>JAX, MaxText, XPK</em>
+      <li tabindex="0"><span class="n">03</span><b>Pretraining</b><em>JAX, MaxText, XPK</em>
         <p>Sharding layouts, TPU recipes, restarts, and a checkpoint lineage hashed from step 0. Notes in the research book.</p></li>
-      <li tabindex="0"><span class="n">4</span><b>Mid-training + SFT</b><em>instruction tuning</em>
+      <li tabindex="0"><span class="n">04</span><b>Mid-training + SFT</b><em>instruction tuning</em>
         <p>Instruction-tuning pipelines on DeepSpeed, FSDP and Ray, with activation recomputation and mixed precision.</p></li>
-      <li tabindex="0"><span class="n">5</span><b>Alignment</b><em>RLHF, GRPO, DPO</em>
+      <li tabindex="0"><span class="n">05</span><b>Alignment</b><em>RLHF, GRPO, DPO</em>
         <p>RL on TPUs: 2,048 answers scored per step, language-aware rewards, and checks for reward hacking.</p></li>
-      <li tabindex="0"><span class="n">6</span><b>Deployment</b><em>4-bit, llama.cpp, edge</em>
+      <li tabindex="0"><span class="n">06</span><b>Deployment</b><em>4-bit, llama.cpp, edge</em>
         <p>Quantised builds running on laptops, Jetson boards and Raspberry Pi class hardware.</p></li>
     </ol>
   </div>
@@ -96,9 +122,9 @@
   </div>
 </section>
 
-<!-- OTHER WORK -->
+<!-- PROJECTS -->
 <section id="work" class="wrap section">
-  <p class="label">Other work</p>
+  <div class="shead"><span class="no">02</span><p class="label">Other work</p></div>
   <h2>Projects I couldn't leave alone</h2>
   <p class="lead">Each of these started as a question I wanted answered properly: how fast can this go, does that actually work. I kept at them until I understood why.</p>
 
@@ -117,19 +143,19 @@
     </div>
   </article>
 
-  <div class="cards">
-    <a class="card" href="https://github.com/paranidharan1/ML-driven-Video-analysis" target="_blank" rel="noopener"><span class="pill">Computer vision</span><h3>AffectSense</h3><p>Detects faces in meeting recordings and reads emotion and focus. OpenCV, FER and FastAPI.</p></a>
-    <div class="card"><span class="pill">Generative AI</span><h3>Code chatbot on a small model</h3><p>Phi-2 behind a FastAPI backend and a React front end, with structured XML output. Model-agnostic, so swapping the model is trivial.</p></div>
-    <div class="card"><span class="pill">Data</span><h3>Document Prep Kit</h3><p>Builds fine-tuning data from scientific papers using IBM Docling, linking figures, tables and formulas to their captions by proximity.</p></div>
-    <a class="card" href="https://github.com/paranidharan1/RAG-celery-redis" target="_blank" rel="noopener"><span class="pill">Systems</span><h3>Multimodal RAG</h3><p>Celery and Redis workers cut processing time by 40%. A Scrapy pipeline handled 500K+ records and 50 GB of raw data.</p></a>
-    <a class="card" href="https://github.com/paranidharan1/pdw-simulator" target="_blank" rel="noopener"><span class="pill">Signals</span><h3>CAESAR PDW simulator</h3><p>A Pulse Descriptor Word simulator for radar signal processing work.</p></a>
-    <a class="card" href="https://github.com/parani-zenteiq-ai/vlm-physics-finetune" target="_blank" rel="noopener"><span class="pill">Fine-tuning</span><h3>Physics vision-language model</h3><p>Qwen2-VL-7B fine-tuned with LoRA and QLoRA to work through physics problems. Published on Hugging Face.</p></a>
-  </div>
+  <ul class="index">
+    <li><a href="https://github.com/paranidharan1/ML-driven-Video-analysis" target="_blank" rel="noopener"><span class="id">A</span><div><h3>AffectSense</h3><p>Detects faces in meeting recordings and reads emotion and focus. OpenCV, FER and FastAPI.</p></div><span class="tg">Computer vision</span><i>↗</i></a></li>
+    <li><div class="row"><span class="id">B</span><div><h3>Code chatbot on a small model</h3><p>Phi-2 behind a FastAPI backend and a React front end, with structured XML output. Model-agnostic, so swapping the model is trivial.</p></div><span class="tg">Generative AI</span><i></i></div></li>
+    <li><div class="row"><span class="id">C</span><div><h3>Document Prep Kit</h3><p>Builds fine-tuning data from scientific papers using IBM Docling, linking figures, tables and formulas to their captions by proximity.</p></div><span class="tg">Data</span><i></i></div></li>
+    <li><a href="https://github.com/paranidharan1/RAG-celery-redis" target="_blank" rel="noopener"><span class="id">D</span><div><h3>Multimodal RAG</h3><p>Celery and Redis workers cut processing time by 40%. A Scrapy pipeline handled 500K+ records and 50 GB of raw data.</p></div><span class="tg">Systems</span><i>↗</i></a></li>
+    <li><a href="https://github.com/paranidharan1/pdw-simulator" target="_blank" rel="noopener"><span class="id">E</span><div><h3>CAESAR PDW simulator</h3><p>A Pulse Descriptor Word simulator for radar signal processing work.</p></div><span class="tg">Signals</span><i>↗</i></a></li>
+    <li><a href="https://github.com/parani-zenteiq-ai/vlm-physics-finetune" target="_blank" rel="noopener"><span class="id">F</span><div><h3>Physics vision-language model</h3><p>Qwen2-VL-7B fine-tuned with LoRA and QLoRA to work through physics problems. Published on Hugging Face.</p></div><span class="tg">Fine-tuning</span><i>↗</i></a></li>
+  </ul>
 </section>
 
 <!-- NOTES -->
 <section id="notes" class="wrap section">
-  <p class="label">Notes</p>
+  <div class="shead"><span class="no">03</span><p class="label">Notes</p></div>
   <h2>Writing down what confused me</h2>
   <a class="feature" href="https://parani-zenteiq-ai.github.io/parallelism/" target="_blank" rel="noopener">
     <div class="feature-copy">
@@ -140,33 +166,33 @@
     </div>
     <div class="feature-art" aria-hidden="true"><div class="g"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
   </a>
-  <div class="cards two">
-    <a class="card" href="https://github.com/paranidharan1/llm-pretraining-research-book" target="_blank" rel="noopener"><span class="pill">Manual</span><h3>LLM pretraining research book</h3><p>Pretraining a 2B dense and a 5B MoE model on TPUs with MaxText, JAX and XLA.</p></a>
-    <a class="card" href="https://github.com/parani-zenteiq-ai/LoRA-model-finetuning" target="_blank" rel="noopener"><span class="pill">Notes</span><h3>LoRA, phase by phase</h3><p>A learning repo with pseudo-code and a short README at every stage.</p></a>
-  </div>
+  <ul class="index compact">
+    <li><a href="https://github.com/paranidharan1/llm-pretraining-research-book" target="_blank" rel="noopener"><span class="id">G</span><div><h3>LLM pretraining research book</h3><p>Pretraining a 2B dense and a 5B MoE model on TPUs with MaxText, JAX and XLA.</p></div><span class="tg">Manual</span><i>↗</i></a></li>
+    <li><a href="https://github.com/parani-zenteiq-ai/LoRA-model-finetuning" target="_blank" rel="noopener"><span class="id">H</span><div><h3>LoRA, phase by phase</h3><p>A learning repo with pseudo-code and a short README at every stage.</p></div><span class="tg">Notes</span><i>↗</i></a></li>
+  </ul>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience" class="wrap section">
-  <p class="label">Experience</p>
+  <div class="shead"><span class="no">04</span><p class="label">Experience</p></div>
   <h2>Two years of making models scale</h2>
-  <ol class="path">
-    <li>
-      <span class="when">Aug 2025 to present</span>
-      <h3>AI Research Engineer <small>ZenteiQ, Bengaluru</small></h3>
-      <p>Core team on scientific foundation models under the IndiaAI Mission. Distributed training and inference for multi-billion-parameter models with DeepSpeed, FSDP, Ray and Megatron-LM, using mixed precision (FP16/BF16) and activation recomputation. Instruction-tuning, chat alignment and RL pipelines (RLHF, GRPO, DPO), with a focus on AI for education.</p>
-    </li>
-    <li>
-      <span class="when">Aug 2024 to present</span>
-      <h3>Research Engineer <small>AiREX Lab, Indian Institute of Science · Advisor: Prof. Sashikumaar Ganesan</small></h3>
-      <p>Built a radar signal classification model for <b>DRDO</b> that improved performance by 35%, with a Kafka data pipeline and a Dockerised workflow (CommitLint, Black). Research collaboration with <b>IBM</b> on Granite foundation models.</p>
-    </li>
-    <li>
-      <span class="when">Jun to Aug 2024</span>
-      <h3>Research Intern <small>AiREX Lab, Indian Institute of Science</small></h3>
-      <p>Multimodal RAG with vision-language models, 40% faster using Celery and Redis. Scraped and processed 500K+ records and over 50 GB of raw data.</p>
-    </li>
-  </ol>
+  <div class="revs">
+    <div class="rev">
+      <div class="rv-when"><b>Aug 2025 – present</b><span>ZenteiQ, Bengaluru</span></div>
+      <div class="rv-body"><h3>AI Research Engineer</h3>
+      <p>Core team on scientific foundation models under the IndiaAI Mission. Distributed training and inference for multi-billion-parameter models with DeepSpeed, FSDP, Ray and Megatron-LM, using mixed precision (FP16/BF16) and activation recomputation. Instruction-tuning, chat alignment and RL pipelines (RLHF, GRPO, DPO), with a focus on AI for education.</p></div>
+    </div>
+    <div class="rev">
+      <div class="rv-when"><b>Aug 2024 – present</b><span>AiREX Lab, Indian Institute of Science</span></div>
+      <div class="rv-body"><h3>Research Engineer</h3>
+      <p>Advisor: Prof. Sashikumaar Ganesan. Built a radar signal classification model for <b>DRDO</b> that improved performance by 35%, with a Kafka data pipeline and a Dockerised workflow (CommitLint, Black). Research collaboration with <b>IBM</b> on Granite foundation models.</p></div>
+    </div>
+    <div class="rev">
+      <div class="rv-when"><b>Jun – Aug 2024</b><span>AiREX Lab, Indian Institute of Science</span></div>
+      <div class="rv-body"><h3>Research Intern</h3>
+      <p>Multimodal RAG with vision-language models, 40% faster using Celery and Redis. Scraped and processed 500K+ records and over 50 GB of raw data.</p></div>
+    </div>
+  </div>
 
   <div class="trio">
     <div class="box"><h4>Open source</h4><p><b>SciREX</b>, a scientific machine learning library. I wrote the full regression module, the PyPI packaging and the documentation.</p></div>
