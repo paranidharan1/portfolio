@@ -55,8 +55,8 @@
         '  <b>clear</b>      tidy up';
     },
     whoami: function () {
-      return '<b>Paranidharan</b>, ML engineer, Bengaluru.\n' +
-        'Model training at ZenteiQ. Before that: IISc (radar ML for DRDO, Granite work with IBM).\n' +
+      return '<b>Paranidharan</b>, AI research engineer, Bengaluru.\n' +
+        'AI Research Engineer at ZenteiQ (model training). Research Engineer at IISc: radar ML for DRDO, Granite work with IBM.\n' +
         'Likes: sharding layouts, TensorRT, a clean Dockerfile.';
     },
     dhir: function () {
