@@ -57,25 +57,29 @@ h3{font-size:18px;line-height:1.3;letter-spacing:-.015em;font-weight:700}
 /* about */
 .about{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;margin-top:32px;align-items:start}
 .about-text p{color:var(--soft);margin-bottom:16px;font-size:17px}
-.stack{list-style:none;padding:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
-.stack li{display:grid;gap:2px;padding:16px 20px;border-bottom:1px solid var(--line2)}
+.stack{list-style:none;padding:0;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.stack li{position:relative;display:grid;gap:2px;padding:16px 20px 16px 48px;border-bottom:1px solid var(--line2)}
+.stack{counter-reset:s}
+.stack li::before{counter-increment:s;content:counter(s);position:absolute;left:16px;top:17px;width:22px;height:22px;border-radius:50%;background:var(--accent-dim);color:var(--accent);font-size:12px;font-weight:700;display:grid;place-items:center}
 .stack li:last-child{border:0}
 .stack b{font-size:15.5px}
 .stack span{font-size:14px;color:var(--muted);line-height:1.5}
 
 /* experience */
 .jobs{margin-top:36px;display:grid;gap:14px}
-.job{display:grid;grid-template-columns:200px 1fr;gap:28px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px 28px;box-shadow:var(--shadow)}
-.job-meta b{display:block;font-size:14px;color:var(--accent)}
+.job{position:relative;display:grid;grid-template-columns:210px 1fr;gap:28px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 30px 26px 34px;box-shadow:var(--shadow);overflow:hidden}
+.job::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--accent),#ff8a5c)}
+.job-meta b{display:inline-block;font-size:13px;color:var(--accent);background:var(--accent-dim);border-radius:99px;padding:3px 12px}
 .job-meta span{display:block;margin-top:6px;font-size:14px;color:var(--muted);line-height:1.5}
 .job-body h3{margin-bottom:10px;font-size:19px}
 .job-body p{color:var(--soft);font-size:15.5px}
 .job-body ul{padding-left:18px;display:grid;gap:7px;color:var(--soft);font-size:15.5px}
 .job-body li::marker{color:var(--accent)}
-.job.milestone{background:linear-gradient(135deg,#fff,#fdeef3);border-color:rgba(217,47,90,.3)}
+.job.milestone{background:linear-gradient(135deg,#fff 40%,#fdeef3);border-color:rgba(217,47,90,.3)}
+.job.milestone::before{background:var(--ink)}
 
 /* dhir */
-.table-wrap{margin-top:30px;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+.table-wrap{margin-top:30px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
 table{width:100%;border-collapse:collapse;font-size:15px}
 th{text-align:left;padding:13px 22px;background:var(--tint);font-size:13px;font-weight:700;letter-spacing:.02em}
 td{padding:12px 22px;border-top:1px solid var(--line2)}
@@ -92,18 +96,24 @@ tbody tr:hover{background:#fcf9ff}
 .grid{display:grid;gap:14px;margin-top:30px}
 .g3{grid-template-columns:repeat(3,1fr)}
 .g4{grid-template-columns:repeat(4,1fr)}
-.card{display:flex;flex-direction:column;gap:9px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow);transition:.2s}
-a.card:hover{transform:translateY(-3px);box-shadow:var(--lift);border-color:rgba(217,47,90,.35)}
-.card p{color:var(--muted);font-size:14.5px;line-height:1.6;flex:1}
-.metric{margin-top:6px;padding-top:12px;border-top:1px dashed var(--line)}
-.metric b{display:block;font-weight:800;font-size:25px;letter-spacing:-.04em;color:var(--accent);line-height:1.15}
-.metric span{display:block;margin-top:3px;font-size:12.5px;color:var(--muted)}
+.card{position:relative;display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 24px 20px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s,border-color .2s;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--line),var(--line2));transition:background .2s}
+a.card:hover{transform:translateY(-4px);box-shadow:var(--lift);border-color:rgba(217,47,90,.35)}
+a.card:hover::before{background:linear-gradient(90deg,var(--accent),#ff8a5c)}
+.card h3{font-size:18.5px}
+.card p{color:var(--muted);font-size:14.5px;line-height:1.62;flex:1}
+.metric{margin-top:8px;padding:12px 14px;background:var(--tint);border-radius:12px}
+.metric b{display:block;font-weight:800;font-size:24px;letter-spacing:-.04em;color:var(--accent);line-height:1.15}
+.metric span{display:block;margin-top:3px;font-size:12.5px;color:var(--muted);line-height:1.4}
+a.card::after{content:"Open ↗";margin-top:6px;padding-top:12px;border-top:1px solid var(--line2);font-size:13px;font-weight:700;color:var(--accent);opacity:.85}
+a.card:hover::after{opacity:1}
 
 /* skills */
-.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 28px;margin-top:36px;padding-top:28px;border-top:1px solid var(--line)}
-.skills h4{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
+.skills>div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px;box-shadow:var(--shadow)}
+.skills h4{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
 .skills p{display:flex;flex-wrap:wrap;gap:7px}
-.skills span{font-size:13.5px;font-weight:500;color:var(--soft);background:#fff;border:1px solid var(--line);border-radius:99px;padding:3px 12px}
+.skills span{font-size:13.5px;font-weight:500;color:var(--soft);background:var(--tint);border-radius:99px;padding:4px 13px}
 
 /* contact + footer */
 .contact{text-align:center;padding-bottom:96px}
@@ -131,3 +141,6 @@ a.card:hover{transform:translateY(-3px);box-shadow:var(--lift);border-color:rgba
   .rv{opacity:1;transform:none;transition:none}
   html{scroll-behavior:auto}
 }
+
+/* keep un-linked cards the same height as linked ones */
+div.card::after{content:"\00a0";margin-top:6px;padding-top:12px;border-top:1px solid transparent;font-size:13px}
