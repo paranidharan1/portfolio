@@ -146,3 +146,31 @@ a.card:hover::after{opacity:1}
 
 /* keep un-linked cards the same height as linked ones */
 div.card::after{content:"\00a0";margin-top:6px;padding-top:12px;border-top:1px solid transparent;font-size:13px}
+
+
+/* researcher / engineer touches */
+.interests{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.interests b{font-size:12.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
+.interests p{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 0}
+.interests span{font-size:13.5px;font-weight:500;color:var(--soft);background:var(--tint);border-radius:99px;padding:4px 13px}
+.abstract{max-width:70ch;margin-top:18px;padding:18px 22px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 14px 14px 0;box-shadow:var(--shadow)}
+.abstract b{display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.abstract p{color:var(--soft);font-size:16.5px;line-height:1.65}
+.cite{margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.cite-h{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line2)}
+.cite-h b{font-size:14px}
+.copy{font:600 13px var(--font);color:var(--accent);background:var(--accent-dim);border:0;border-radius:99px;padding:6px 14px;cursor:pointer;transition:.15s}
+.copy:hover{background:var(--accent);color:#fff}
+.cite pre{margin:0;padding:16px 18px;overflow-x:auto;background:var(--tint);font:13px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--soft)}
+.hub{margin-top:36px}
+.hub-h{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.hub-h h3{font-size:17px}
+.live{font-size:12px;font-weight:700;color:var(--muted);background:var(--tint);border-radius:99px;padding:2px 11px}
+.live.on{color:#1d7a46;background:#e4f5ea}
+.live.on::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#2fa466;margin-right:6px;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.hub .num{text-align:right;font-variant-numeric:tabular-nums}
+.hub td a{font-weight:600;border-bottom:1px solid var(--line)}
+.hub td a:hover{border-color:var(--accent);color:var(--accent)}
+.hub td{font-size:14.5px}
+@media(prefers-reduced-motion:reduce){.live.on::before{animation:none}}

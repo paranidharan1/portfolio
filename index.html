@@ -68,6 +68,8 @@
       <p>I'm an engineer who loves building things, figuring out how they work, and occasionally breaking them in the process. I'm currently building foundation models and AI systems at ZenteiQ.</p>
       <p>I've worked across the LLM stack, from data and tokenisation to model architecture, large-scale pretraining, post-training and deployment. I enjoy the messy side of engineering as much as the breakthroughs, especially when a training run finally works after hours of debugging.</p>
       <p>Deep into foundation models, LLMs, distributed training, JAX, TPUs and scientific AI.</p>
+      <div class="interests"><b>Research interests</b>
+        <p><span>Pretraining at scale</span><span>Mixture-of-experts</span><span>Tokenisation for Indian languages</span><span>RL on TPUs</span><span>Edge inference</span></p></div>
     </div>
     <ul class="stack">
       <li><b>Data and tokenisation</b><span>Curation pipelines and a 131k tokenizer for English and ten Indian languages.</span></li>
@@ -129,7 +131,7 @@
 <section id="dhir" class="wrap section">
   <p class="label">03 · Featured project</p>
   <h2>Dhīr: foundation models from scratch</h2>
-  <p class="lead">Dhīr 2B (dense) and Dhīr 5B MoE were pretrained from random initialisation on more than 6 trillion tokens, with an in-house tokenizer for English and ten Indian languages. Both run entirely offline on laptops and mobile hardware. I'm second author on the technical report, among 17 authors.</p>
+  <div class="abstract"><b>Abstract</b><p>Dhīr 2B (dense) and Dhīr 5B MoE were pretrained from random initialisation on more than 6 trillion tokens, with an in-house tokenizer for English and ten Indian languages. Both run entirely offline on laptops and mobile hardware. I'm second author on the technical report, among 17 authors.</p></div>
 
   <div class="table-wrap">
     <table>
@@ -145,6 +147,19 @@
       </tbody>
     </table>
     <p class="note">Company-reported figures from the ZenteiQ launch. Decode speeds measured with llama.cpp.</p>
+  </div>
+
+  <div class="cite">
+    <div class="cite-h"><b>Cite the technical report</b><button type="button" class="copy" id="copy-bib">Copy BibTeX</button></div>
+<pre id="bibtex">@techreport{dhir2026,
+  title       = {Dh\={\i}r: Sovereign Compact Foundation Models
+                 Pretrained from Scratch on TPUs},
+  author      = {Ganesan, Sashikumaar and Paranidharan M and
+                 Choudhary, Pinakin and others},
+  institution = {ZenteiQ AiTech Innovations},
+  year        = {2026},
+  url         = {https://zenteiq.ai/research/publications/}
+}</pre>
   </div>
 
   <div class="grid g3">
@@ -191,6 +206,21 @@
     <div class="card"><span class="pill">Known issue</span><h3>Weekend grudges</h3><p>Machines seem to hold a personal grudge against us, especially on weekends. I've stopped taking it personally.</p><div class="metric"><b>Sat + Sun</b><span>highest failure rate</span></div></div>
     <div class="card"><span class="pill">Habit</span><h3>Papers, then code</h3><p>I chase research papers and implement them to find out which ideas survive contact with a real GPU.</p><div class="metric"><b>arXiv</b><span>read, break, repeat</span></div></div>
   </div>
+
+  <div class="hub">
+    <div class="hub-h"><h3>Live from the Hugging Face Hub</h3><span class="live" id="hub-status">snapshot</span></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Artifact</th><th>Type</th><th class="num">Downloads</th><th class="num">Likes</th></tr></thead>
+        <tbody id="hub-rows">
+          <tr><td><a href="https://huggingface.co/datasets/parani01/dataclaw-parani01" target="_blank" rel="noopener">parani01/dataclaw-parani01</a></td><td>Dataset</td><td class="num">–</td><td class="num">–</td></tr>
+          <tr><td><a href="https://huggingface.co/parani01/phyen" target="_blank" rel="noopener">parani01/phyen</a></td><td>Model</td><td class="num">–</td><td class="num">–</td></tr>
+          <tr><td><a href="https://huggingface.co/parani01/Fine-tuned-physics-VLM-on-LoRA-and-QLoRA" target="_blank" rel="noopener">parani01/Fine-tuned-physics-VLM-on-LoRA-and-QLoRA</a></td><td>Model</td><td class="num">–</td><td class="num">–</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Fetched from the public Hugging Face API when the page loads. Dhīr weights will appear here once they're published.</p>
+    </div>
+  </div>
 </section>
 
 <!-- NOTES -->
@@ -208,9 +238,10 @@
 <section id="background" class="wrap section">
   <p class="label">07 · Background</p>
   <h2>Education, community and skills</h2>
-  <div class="grid g3">
+  <div class="grid g2">
     <div class="card"><span class="pill">Education</span><h3>Sathyabama Institute of Science &amp; Technology</h3><p>B.E. Computer Science and Engineering, 2020 to 2024, first class with distinction. Certifications in AWS, DevOps (IIT Bombay) and cloud-edge ML (NPTEL).</p></div>
     <div class="card"><span class="pill">Community</span><h3>CASML conference, IISc</h3><p>Lead organiser in 2024 and 2025, with 300+ and 500+ participants. The 2025 edition included a hands-on LLM and JAX workshop on Google TPUs.</p></div>
+    <div class="card"><span class="pill">Event</span><h3>India AI Impact Summit 2026</h3><p>Represented ZenteiQ as an exhibitor over two days, talking with founders, researchers and industry leaders about infrastructure, efficiency and turning AI into scalable solutions.</p></div>
     <div class="card"><span class="pill">Open source</span><h3>SciREX</h3><p>A scientific machine learning library. I wrote the full regression module, the PyPI packaging and the documentation.</p></div>
   </div>
 
