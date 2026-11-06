@@ -39,6 +39,7 @@
     <h1>Paranidharan Muruganantham</h1>
     <p class="headline">Scaling intelligence. Building foundation models.</p>
     <p class="tags"><span>LLMs</span><span>Distributed compute</span><span>GPU / TPU systems</span></p>
+    <p class="quip">I teach GPUs and TPUs new tricks, then spend the weekend finding out why they forgot them.</p>
     <p class="intro">I'm an engineer who likes building things and working out how they work. I work across the LLM stack, from data and tokenisation to large-scale pretraining, post-training and deployment, and I recently helped build Dhīr 2B and Dhīr 5B MoE from scratch.</p>
     <div class="cta">
       <a class="btn solid" href="#contact">Get in touch</a>
@@ -81,14 +82,14 @@
 <!-- EXPERIENCE -->
 <section id="experience" class="wrap section">
   <p class="label">02 · Experience</p>
-  <h2>Two years, one destination</h2>
-  <p class="lead">From an IISc internship in June 2024 to the release of Dhīr in November 2026.</p>
+  <h2>Intern to pretraining in two years. Speedrun.</h2>
+  <p class="lead">The route: one IISc internship in June 2024, a lot of debugging, and one very large TPU run in November 2026. No skips, no glitches, plenty of coffee.</p>
 
   <div class="jobs">
     <article class="job milestone">
       <div class="job-meta"><b>Nov 2026</b><span>Milestone</span></div>
       <div class="job-body"><h3>Dhīr 2B and Dhīr 5B MoE released</h3>
-        <p>Two foundation models pretrained from scratch, released under the IndiaAI Mission with the weights, a technical report and evaluation tools.</p></div>
+        <p>Two foundation models pretrained from scratch, released under the IndiaAI Mission with the weights, a technical report and evaluation tools. The loss curve finally behaved.</p></div>
     </article>
 
     <article class="job">
@@ -165,8 +166,8 @@
 <!-- PROJECTS -->
 <section id="projects" class="wrap section">
   <p class="label">04 · Projects</p>
-  <h2>Other work</h2>
-  <p class="lead">Smaller projects, each started from a question I wanted answered properly.</p>
+  <h2>Things I built when nobody asked</h2>
+  <p class="lead">Each one started with "how fast can this go?" and ended with me benchmarking at midnight.</p>
   <div class="grid g4">
     <a class="card" href="https://github.com/parani-zenteiq-ai/TensorRT" target="_blank" rel="noopener"><span class="pill">Inference</span><h3>YOLOv5 on TensorRT</h3><p>PyTorch to ONNX to TensorRT FP16 on an RTX A6000, with careful CUDA memory handling.</p><div class="metric"><b>5.2×</b><span>faster than ONNX Runtime, 495 fps</span></div></a>
     <a class="card" href="https://github.com/paranidharan1/RAG-celery-redis" target="_blank" rel="noopener"><span class="pill">Systems</span><h3>Multimodal RAG</h3><p>Vision-language retrieval with Celery and Redis workers over 50 GB of raw data.</p><div class="metric"><b>−40%</b><span>processing time, 500K+ records</span></div></a>
@@ -179,21 +180,33 @@
   </div>
 </section>
 
+<!-- HOW I WORK -->
+<section id="how" class="wrap section">
+  <p class="label">05 · Field notes</p>
+  <h2>How I actually work</h2>
+  <p class="lead">Unofficial operating manual. Mostly true, occasionally exaggerated for effect.</p>
+  <div class="grid g4">
+    <a class="card" href="https://huggingface.co/datasets/parani01/dataclaw-parani01" target="_blank" rel="noopener"><span class="pill ok">Daily driver</span><h3>Claude Code</h3><p>My terminal runs on it. It writes fast, I read the diff faster (usually). I even published my sessions as a public dataset.</p><div class="metric"><b>dataclaw</b><span>my Claude Code sessions, on Hugging Face</span></div></a>
+    <div class="card"><span class="pill">Ritual</span><h3>Staring at logs</h3><p>Training runs on TPUs have taught me to read logs like tea leaves. Hope, dread and the occasional miracle.</p><div class="metric"><b>3 a.m.</b><span>peak debugging hours</span></div></div>
+    <div class="card"><span class="pill">Known issue</span><h3>Weekend grudges</h3><p>Machines seem to hold a personal grudge against us, especially on weekends. I've stopped taking it personally.</p><div class="metric"><b>Sat + Sun</b><span>highest failure rate</span></div></div>
+    <div class="card"><span class="pill">Habit</span><h3>Papers, then code</h3><p>I chase research papers and implement them to find out which ideas survive contact with a real GPU.</p><div class="metric"><b>arXiv</b><span>read, break, repeat</span></div></div>
+  </div>
+</section>
+
 <!-- NOTES -->
 <section id="notes" class="wrap section">
-  <p class="label">05 · Notes</p>
-  <h2>Writing things down</h2>
-  <p class="lead">Learning notes I wish I'd had when I started.</p>
-  <div class="grid g3">
+  <p class="label">06 · Notes</p>
+  <h2>Notes to my past self</h2>
+  <p class="lead">Written for the version of me that once stared at an out-of-memory error for two hours.</p>
+  <div class="grid g2">
     <a class="card" href="https://parani-zenteiq-ai.github.io/parallelism/" target="_blank" rel="noopener"><span class="pill ok">Interactive course</span><h3>Parallelism</h3><p>How LLMs are trained across thousands of GPUs, from first principles. Data, tensor and pipeline parallelism, ZeRO/FSDP and MoE. Written with Pinakin Choudary.</p></a>
     <a class="card" href="https://github.com/paranidharan1/llm-pretraining-research-book" target="_blank" rel="noopener"><span class="pill">Manual</span><h3>LLM pretraining research book</h3><p>Pretraining a 2B dense and a 5B MoE model on TPUs with MaxText, JAX and XLA.</p></a>
-    <a class="card" href="https://github.com/parani-zenteiq-ai/LoRA-model-finetuning" target="_blank" rel="noopener"><span class="pill">Notes</span><h3>LoRA, phase by phase</h3><p>A learning repo with pseudo-code and a short README at every stage.</p></a>
   </div>
 </section>
 
 <!-- BACKGROUND -->
 <section id="background" class="wrap section">
-  <p class="label">06 · Background</p>
+  <p class="label">07 · Background</p>
   <h2>Education, community and skills</h2>
   <div class="grid g3">
     <div class="card"><span class="pill">Education</span><h3>Sathyabama Institute of Science &amp; Technology</h3><p>B.E. Computer Science and Engineering, 2020 to 2024, first class with distinction. Certifications in AWS, DevOps (IIT Bombay) and cloud-edge ML (NPTEL).</p></div>
@@ -211,9 +224,9 @@
 
 <!-- CONTACT -->
 <section id="contact" class="wrap section contact">
-  <p class="label">07 · Contact</p>
-  <h2>Let's talk</h2>
-  <p class="lead">Happy to talk about foundation models, distributed training and TPU systems.</p>
+  <p class="label">08 · Contact</p>
+  <h2>Got a training run that won't converge?</h2>
+  <p class="lead">Foundation models, distributed training, TPU systems, or why your loss went NaN. Bring coffee.</p>
   <div class="cta center">
     <a class="btn solid" href="mailto:paranidharan270@gmail.com">paranidharan270@gmail.com</a>
     <a class="btn" href="https://www.linkedin.com/in/paranidharanm/" target="_blank" rel="noopener">LinkedIn ↗</a>
@@ -227,7 +240,7 @@
 
 <footer class="wrap foot">
   <span>© 2026 Paranidharan Muruganantham</span>
-  <span>Bengaluru, India</span>
+  <span>Built with Claude Code. A human reviewed it (mostly).</span>
 </footer>
 
 <script src="script.js"></script>

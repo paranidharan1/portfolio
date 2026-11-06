@@ -28,7 +28,8 @@ h1{font-weight:800;font-size:clamp(36px,6.2vw,66px);line-height:1.05;letter-spac
 .headline{font-size:clamp(19px,2.4vw,26px);font-weight:600;letter-spacing:-.02em;color:var(--soft)}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .tags span{font-size:13px;font-weight:600;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:99px;padding:4px 13px}
-.intro{max-width:62ch;margin-top:24px;font-size:18px;color:var(--soft);line-height:1.65}
+.quip{margin-top:18px;font-size:15.5px;font-weight:600;color:var(--accent);max-width:60ch}
+.intro{max-width:62ch;margin-top:18px;font-size:18px;color:var(--soft);line-height:1.65}
 .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .cta.center{justify-content:center}
 .btn{padding:11px 22px;border:1px solid var(--line);border-radius:99px;font-size:14.5px;font-weight:600;background:#fff;box-shadow:var(--shadow);transition:.18s}
@@ -94,6 +95,7 @@ tbody tr:hover{background:#fcf9ff}
 
 /* cards */
 .grid{display:grid;gap:14px;margin-top:30px}
+.g2{grid-template-columns:repeat(2,1fr)}
 .g3{grid-template-columns:repeat(3,1fr)}
 .g4{grid-template-columns:repeat(4,1fr)}
 .card{position:relative;display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 24px 20px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s,border-color .2s;overflow:hidden}
@@ -129,7 +131,7 @@ a.card:hover::after{opacity:1}
   .about,.banner{grid-template-columns:1fr}
 }
 @media(max-width:760px){
-  .g3,.g4,.skills{grid-template-columns:1fr}
+  .g2,.g3,.g4,.skills{grid-template-columns:1fr}
   .job{grid-template-columns:1fr;gap:10px;padding:20px}
   .nav nav a:not(.nav-cta){display:none}
   .hero{padding-top:52px}
