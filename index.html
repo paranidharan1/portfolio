@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Paranidharan Muruganantham · AI Research Engineer</title>
-<meta name="description" content="Paranidharan Muruganantham, AI research engineer at ZenteiQ, Bengaluru. Works across the LLM stack: data, tokenisation, pretraining, post-training and deployment. Co-built Dhīr 2B and 5B MoE, pretrained from scratch on TPUs.">
+<meta name="description" content="Paranidharan Muruganantham, AI research engineer at ZenteiQ, Bengaluru. Works across the LLM stack: data, model design, pretraining and post-training. Co-built Dhīr 2B and 5B MoE, pretrained from scratch on TPUs.">
 <meta name="theme-color" content="#f6f1fb">
 <meta property="og:title" content="Paranidharan Muruganantham · AI Research Engineer">
 <meta property="og:description" content="I pretrain foundation models. Latest: Dhīr, trained from scratch on TPUs.">
@@ -37,8 +37,8 @@
   <div class="wrap">
     <p class="eyebrow">AI Research Engineer · ZenteiQ · Bengaluru</p>
     <h1>Paranidharan Muruganantham</h1>
-    <p class="punch">I pretrain foundation models. Latest: <a href="#dhir">Dhīr</a>, language models trained from scratch on TPUs.</p>
-    <p class="sub">I work across the LLM stack: data and tokenisation, large-scale pretraining, post-training and deployment.</p>
+    <p class="punch">I build foundation models. Latest: <a href="#dhir">Dhīr</a>, language models trained from scratch on TPUs.</p>
+    <p class="sub">I work end to end on the LLM stack: data, model design, large-scale pretraining and post-training.</p>
 
     <div class="metrics" aria-label="Key numbers">
       <a href="#models"><b id="hf-total">1,139</b><span>downloads on Hugging Face</span></a>
@@ -66,7 +66,7 @@
     <a class="card" href="https://zenteiq.ai/dhir/" target="_blank" rel="noopener"><span class="pill ok">Official page</span><h3>Explore Dhīr</h3><p>The ZenteiQ launch page for both models.</p></a>
     <a class="card" href="https://aikosh.indiaai.gov.in/home/public-profile/user/07452cda-0163-4286-a56b-80e8ab56b3c2?tabs=about" target="_blank" rel="noopener"><span class="pill ok">Available</span><h3>AIKosh</h3><p>Released on India's national AI repository.</p></a>
     <a class="card" href="https://huggingface.co/parani01" target="_blank" rel="noopener"><span class="pill">Coming soon</span><h3>Hugging Face</h3><p>Weights under Apache 2.0, landing at parani01.</p></a>
-    <div class="card"><span class="pill">Coming soon</span><h3>Technical report</h3><p>I'm second author. I'll link it here once it's published.</p></div>
+    <a class="card" href="https://zenteiq.ai/research/publications/" target="_blank" rel="noopener"><span class="pill">Coming soon</span><h3>Technical report</h3><p>I'm second author. The report will appear on ZenteiQ's publications page.</p></a>
   </div>
 
   <details class="more">
@@ -89,11 +89,10 @@
       </div>
 
       <ul class="stack">
-        <li><b>Data and tokenisation</b><span>Curation pipelines and a 131k tokenizer for English and ten Indian languages.</span></li>
+        <li><b>Data</b><span>Curation pipelines for English and ten Indian languages.</span></li>
         <li><b>Model architecture</b><span>Dense and mixture-of-experts transformers.</span></li>
         <li><b>Pretraining</b><span>JAX and MaxText on Google Cloud TPU v6e, 6T+ tokens.</span></li>
         <li><b>Post-training</b><span>Instruction tuning, RLHF, GRPO and DPO.</span></li>
-        <li><b>Deployment</b><span>4-bit models running offline on laptops and mobile hardware.</span></li>
       </ul>
 
       <div class="linkgroup">
@@ -122,7 +121,7 @@
 <section id="models" class="wrap section">
   <div class="mh"><p class="label">Models</p><span class="live" id="hub-status">snapshot</span></div>
   <h2>Models I've shipped</h2>
-  <p class="lead">Two I pretrained from scratch, two I fine-tuned, one dataset, and a few more cooking in private. All-time downloads, live from Hugging Face.</p>
+  <p class="lead">Two we pretrained from scratch at ZenteiQ, two I fine-tuned, one dataset, and a few more cooking in private. All-time downloads, live from Hugging Face.</p>
   <div class="grid g3">
     <a class="card" href="https://zenteiq.ai/dhir/" target="_blank" rel="noopener"><span class="pill ok">Pretrained from scratch</span><h3>Dhīr 2B</h3><p class="spec">Dense · 6T+ tokens · TPU v6e</p><p>A 2.03B-parameter language model trained from random weights. Small enough to run offline on a laptop's integrated graphics.</p><div class="mstats"><div><b>2.03B</b><span>parameters</span></div><div><b>1.21 GB</b><span>in 4-bit</span></div></div></a>
     <a class="card" href="https://zenteiq.ai/dhir/" target="_blank" rel="noopener"><span class="pill ok">Pretrained from scratch</span><h3>Dhīr 5B MoE</h3><p class="spec">Mixture of experts · 2 of 12 per token</p><p>5.09B total parameters but only 1.79B active per token, so it decodes faster than the dense model for a single user.</p><div class="mstats"><div><b>5.09B</b><span>total</span></div><div><b>1.79B</b><span>active</span></div></div></a>
@@ -164,7 +163,7 @@
   <h2>Intern to pretraining in two years. Speedrun.</h2>
   <ol class="tl">
     <li><b>Nov 2026</b><div><h3>Dhīr 2B and 5B MoE released</h3><p>Pretrained from scratch, released under the IndiaAI Mission.</p></div></li>
-    <li><b>Aug 2025 – now</b><div><h3>AI Research Engineer · ZenteiQ</h3><p>Pretraining, post-training and deployment of Dhīr.</p></div></li>
+    <li><b>Aug 2025 – now</b><div><h3>AI Research Engineer · ZenteiQ</h3><p>Owned data, pretraining and post-training work on Dhīr.</p></div></li>
     <li><b>Dec 2024 – Aug 2025</b><div><h3>Research Engineer · AiREX Lab, IISc</h3><p>IBM Granite, DRDO radar ML (+35%), SciREX.</p></div></li>
     <li><b>Jun – Aug 2024</b><div><h3>Research Intern · AiREX Lab, IISc</h3><p>Multimodal RAG over 500K+ records.</p></div></li>
   </ol>
@@ -177,8 +176,8 @@
           <div class="job-meta"><b>Aug 2025 – Present</b><span>ZenteiQ<br>Bengaluru</span></div>
           <div class="job-body"><h3>AI Research Engineer</h3>
             <ul>
-              <li>Core team on Dhīr 2B and 5B MoE, pretrained from random weights on Google Cloud TPU v6e over 6T+ tokens.</li>
-              <li>Worked across the stack: data and tokenisation, pretraining, post-training and deployment.</li>
+              <li>Worked on Dhīr 2B and 5B MoE, pretrained from random weights on Google Cloud TPU v6e over 6T+ tokens.</li>
+              <li>Worked end to end: data, model design, pretraining and post-training.</li>
               <li>Distributed training and inference for multi-billion-parameter models with JAX, MaxText, DeepSpeed, FSDP, Ray and Megatron-LM, using mixed precision (FP16/BF16) and activation recomputation.</li>
               <li>Instruction-tuning, chat alignment and reinforcement learning pipelines (RLHF, GRPO, DPO).</li>
               <li>Represented ZenteiQ as an exhibitor at the India AI Impact Summit 2026.</li>
